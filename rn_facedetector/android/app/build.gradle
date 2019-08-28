@@ -74,6 +74,12 @@ import com.android.build.OutputFile
  *   extraPackagerArgs: []
  * ]
  */
+ allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com" }
+    }
+}
 
 project.ext.react = [
     entryFile: "index.js",
@@ -133,6 +139,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+         missingDimensionStrategy 'react-native-camera', 'general' 
+          //missingDimensionStrategy 'react-native-camera', 'mlkit'
     }
     splits {
         abi {
@@ -188,6 +196,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-camera')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
