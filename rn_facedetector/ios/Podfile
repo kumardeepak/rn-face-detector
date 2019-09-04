@@ -29,6 +29,11 @@ target 'rn_facedetector' do
 
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
+
+  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+
+  pod 'RNFBMLVision', :path => '../node_modules/@react-native-firebase/ml-vision'
+
   target 'rn_facedetectorTests' do
     inherit! :search_paths
     # Pods for testing

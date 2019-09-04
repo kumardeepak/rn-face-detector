@@ -139,7 +139,8 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-         missingDimensionStrategy 'react-native-camera', 'general' 
+         missingDimensionStrategy 'react-native-camera', 'general'
+        multiDexEnabled true
           //missingDimensionStrategy 'react-native-camera', 'mlkit'
     }
     splits {
@@ -196,10 +197,18 @@ android {
 }
 
 dependencies {
+    implementation project(':@react-native-firebase_ml-vision')
+    implementation project(':@react-native-firebase_app')
+    // implementation project(':react-native-firebase')
     implementation project(':react-native-camera')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    // implementation 'com.google.firebase:firebase-ml-vision:23.0.0'
 
+
+    // implementation 'com.google.firebase:firebase-ml-vision-face-model:18.0.0'
+
+   
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
       debugImplementation files(hermesPath + "hermes-debug.aar")
