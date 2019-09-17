@@ -197,9 +197,6 @@ android {
 }
 
 dependencies {
-    implementation project(':@react-native-firebase_ml-vision')
-    implementation project(':@react-native-firebase_app')
-    // implementation project(':react-native-firebase')
     implementation project(':react-native-camera')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules

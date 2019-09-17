@@ -7,7 +7,6 @@ import com.facebook.react.PackageList;
 import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
 import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
-import io.invertase.firebase.ml.vision.ReactNativeFirebaseMLVisionPackage;
 
 // import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 // import io.invertase.firebase.RNFirebasePackage;
@@ -32,7 +31,7 @@ public class MainApplication extends Application implements ReactApplication {
       @SuppressWarnings("UnnecessaryLocalVariable")
       List<ReactPackage> packages = new PackageList(this).getPackages();
       // Packages that cannot be autolinked yet can be added manually here, for example:
-       packages.add(new ReactNativeFirebaseMLVisionPackage());
+      // packages.add(new ReactNativeFirebaseMLVisionPackage());
       return packages;
     }
 
